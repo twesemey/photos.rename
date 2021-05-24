@@ -9,7 +9,8 @@ def rename_imgs(path):
             with open(file, 'rb') as pic:
                 img = Image(pic)
             if img.has_exif:
-                parsed_date = img.datetime.replace(':', '-').split(' ')
+                parsed_date = img.datetime_original.replace(
+                    ':', '-').split(' ')
                 if parsed_date[0] in str(file):
                     continue
                 file.rename(
