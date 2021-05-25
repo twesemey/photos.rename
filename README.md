@@ -1,6 +1,6 @@
-# photos.rename()
+# Welcome to photos.rename()
 
-## Organising photos with python
+## Organising photos with a python auto renaming utility
 
 This is work in progress. Basic functionality as CLI tool is given.
 
@@ -8,4 +8,22 @@ Currently supported rename scheme:
 > YYYY-MM-DD_old-name.ext
 
 The date is extracted from the exif data of the file.
-Depends on [exif](https://pypi.org/project/exif/).
+This currently depends on [exif](https://pypi.org/project/exif/).
+
+### Current limitations
+
+Currently supported file types are jpeg and tiff (untested).
+Maybe I will add PNG support via [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png) in the future. 
+
+## Background of the project
+
+I developed this little script to automatically rename my photos collection taken by my DSLR to reduce the risk of name collisions.
+Furthermore this will help me with my photos from my smartphone as well. :)
+
+## Current goals and roadmap
+
+* Supporting more renaming schemes
+
+Optional longterm goals:
+* Adding support for PNGs
+* Adding a simple GUI for file path dialogs
