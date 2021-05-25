@@ -13,7 +13,7 @@ This currently depends on [exif](https://pypi.org/project/exif/).
 ### Current limitations
 
 Currently supported file types are jpeg and tiff (untested).
-Maybe I will add PNG support via [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png) in the future. 
+Maybe I will add PNG support via [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png), [Hachoir](https://hachoir.readthedocs.io/en/latest/index.html), a PNG reading lib or XMP in the future. 
 
 ## Background of the project
 
