@@ -24,6 +24,7 @@ Furthermore this will help me with my photos from my smartphone as well. :)
 ## Current goals and roadmap
 
 * Supporting more renaming schemes
+* Recursive renaming -> including subfolders
 
 **Optional longterm goals:**
 * Adding support for PNGs
