@@ -12,9 +12,12 @@ This currently depends on [exif](https://pypi.org/project/exif/).
 
 ### Current limitations
 
-Currently supported file types are jpeg and tiff (untested).
-Maybe I will add PNG support via [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png), [Hachoir](https://hachoir.readthedocs.io/en/latest/index.html), a PNG reading lib or XMP in the future.  
-While evaluating Pillow and Hachoir I saw that my test data does not incorporate any related meta data. Therefore I would use the modification or creation time of the file as used timestamp for renaming if XMP or another solution would not work.
+Currently supported file type is jpg / jpeg.
+Maybe I will add PNG support via [Pillow](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png),
+[Hachoir](https://hachoir.readthedocs.io/en/latest/index.html), a PNG reading lib or XMP in the future.  
+_While evaluating Pillow and Hachoir I saw that my test data does not incorporate any related meta data.
+Therefore I would use the modification > or creation time of the file as used timestamp for renaming if XMP or 
+another solution would not work._
 
 ## Background of the project
 
@@ -24,8 +27,12 @@ Furthermore this will help me with my photos from my smartphone as well. :)
 ## Current goals and roadmap
 
 * Supporting more renaming schemes
-* Recursive renaming -> including subfolders
 
-**Optional longterm goals:**
+**Optional long-term goals:**
+
+* Adding a simple GUI for image folder path dialogs and options
 * Adding support for PNGs
-* Adding a simple GUI for image folder path dialogs
+
+**Finished implementations:**
+
+* Recursive renaming -> including subfolders
