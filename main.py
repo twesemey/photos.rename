@@ -10,11 +10,14 @@ def rename_imgs(file):
         with open(file, 'rb') as pic:
             img = Image(pic)
         if img.has_exif:
-            parsed_date = img.datetime_original.replace(
-                ':', '-').split(' ')
-            if parsed_date[0] not in str(file):
-                file.rename(
-                    Path(file.parent / Path(parsed_date[0] + '_' + file.stem + file.suffix)))
+            try:
+                parsed_date = img.datetime_original.replace(
+                    ':', '-').split(' ')
+                if parsed_date[0] not in str(file):
+                    file.rename(
+                        Path(file.parent / Path(parsed_date[0] + '_' + file.stem + file.suffix)))
+            except:
+                print(f'{file.stem} has no valid datetime exif tag')
 
 
 if __name__ == '__main__':
