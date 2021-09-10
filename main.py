@@ -17,7 +17,15 @@ def rename_imgs(file):
                     file.rename(
                         Path(file.parent / Path(parsed_date[0] + '_' + file.stem + file.suffix)))
             except:
-                print(f'{file.stem} has no valid datetime exif tag')
+                print(f'{file.stem} has no valid datetime original exif tag')
+                try:
+                    parsed_date = img.datetime.replace(
+                        ':', '-').split(' ')
+                    if parsed_date[0] not in str(file):
+                        file.rename(
+                            Path(file.parent / Path(parsed_date[0] + '_' + file.stem + file.suffix)))
+                except:
+                    print(f'Alternative tag for {file.stem} not found')
 
 
 if __name__ == '__main__':
